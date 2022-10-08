@@ -2,40 +2,40 @@
 #include <cmath>
 using namespace std;
 enum operation {
-    g_atgx, g_actgx, rad_atgx, rad_actgx, help
+    dec_atgx, dec_actgx, rad_atgx, rad_actgx, help
   };
 
 int main(){
   double x; 
   const double PI = 3.141592653589793;
-  cout << "Выберите операцию g_atgx ,rad_actgx ,g_actgx, rad_actgx или help"; 
+  cout << "Выберите операцию dec_atgx ,rad_actgx ,dec_actgx, rad_actgx или help"; 
   cout << "Введите значение аргумента х"; 
   cin >> operation;
   cin >> x;
   switch(operation) { 
-    case g_atgx: 
+    case dec_atgx: 
      cout << "atg(x) = " << atan(x) << "в градусах" << endl;
      break; 
-    case g_actgx: 
+    case dec_actgx: 
       cout << "actg(x) = " << 1/atan(x) << "в градусах" << endl;
       break; 
     case rad_atgx: 
       cout << "atg(x) = " << atan (x * PI / 180) << "в радианах" << endl; 
       break; 
-    case rad_atgx: 
+    case rad_actgx: 
       cout << "aсtg(x) = " << 1/(atan (x * PI / 180)) << "в радианах" << endl; 
       break; 
    case help: 
-      cout <<"g_atgx - вычисляем тангенс угла в градусах /n";
+      cout <<"dec_atgx - вычисляем тангенс угла в градусах /n";
       cout <<"rad_atgx - вычисляем тангенс угла в радианах /n";
-      cout <<"g_actgx - вычисляем катангинс угла в градусах /n";
-      cout <<"rad atgx -  вычисляем катангинс угла в радианах"<< endl;  
+      cout <<"dec_actgx - вычисляем катангинс угла в градусах /n";
+      cout <<"rad_actgx -  вычисляем катангинс угла в радианах"<< endl;  
       break; 
     default:
       cout <<"help:- /n";
-      cout <<"g_atgx - вычисляем тангенс угла в градусах /n";
+      cout <<"dec_atgx - вычисляем тангенс угла в градусах /n";
       cout <<"rad_atgx - вычисляем тангенс угла в радианах /n";
-      cout <<"g_actgx- вычисляем катангинс угла в градусах /n";
+      cout <<"dec_actgx- вычисляем катангинс угла в градусах /n";
       cout <<"rad_actgx -  вычисляем катангинс угла в радианах"<< endl; 
       break; 
   }
